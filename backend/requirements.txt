@@ -1,6 +1,7 @@
 Django
 djangorestframework
 djangorestframework-simplejwt
+drf-spectacular
 graphene-django
 strawberry-graphql
 fastapi
@@ -13,7 +14,10 @@ redis
 rabbitmq
 django-allauth
 django-cors-headers
-django-channels
 psycopg2-binary
 pytest
 pytest-django
+channels[daphne]
+channels-redis
+uvicorn
+

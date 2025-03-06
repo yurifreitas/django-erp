@@ -1,3 +1,7 @@
-from django.shortcuts import render
+from rest_framework import viewsets
+from .models import Housekeeping
+from .serializers import HousekeepingSerializer
 
-# Create your views here.
+class HousekeepingViewSet(viewsets.ModelViewSet):
+    queryset = Housekeeping.objects.all()
+    serializer_class = HousekeepingSerializer

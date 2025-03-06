@@ -7,6 +7,10 @@ COPY ./ /app/
 
 RUN pip install --no-cache-dir -r /app/requirements.txt
 
+# Cria um script de entrada
+COPY entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
+
 EXPOSE 8000
 
-CMD ["gunicorn", "-b", "0.0.0.0:8000", "core.wsgi:application"]
+ENTRYPOINT ["/entrypoint.sh"]
